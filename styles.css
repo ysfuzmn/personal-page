@@ -19,6 +19,10 @@ body {
 
 }
 
+.navbar-nav .nav-link.active {
+    color: #ADFF00 !important;
+}
+
 
 
 header {
@@ -29,6 +33,9 @@ header {
     width: 100%;
     background: #212336;
 }
+
+
+
 
 .card {
     margin-bottom: 20px;
@@ -70,9 +77,9 @@ header {
 .home {
     display: flex;
     min-height: 500px;
-    margin-top: 7rem;
+    margin-top: 9rem;
     margin-bottom: 8rem;
-    padding: 10px 35px;
+    padding: 10px;
     justify-content: space-between;
     text-align: center;
 
@@ -113,28 +120,53 @@ header {
 
 }
 
-.selection {
-    width: 150px;
 
+
+.selection_icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-
 
 .selection_icons a {
     color: #fff;
-    display: grid;
-    margin-top: 4rem;
-    font-size: 2rem;
-    gap: 2rem
+    margin-top: 3rem;
+}
+
+.selection_icons a i {
+    font-size: 2rem !important;
+  
+    border-radius: 50%;
+    padding: 15px; 
+
+}
+
+.selection_icons a.active i {
+    background-color: #ADFF00;
+    color: #212336;   
 }
 
 .selection_icons a:hover {
-    color: #ADFF00;
+    color: #212336;
+    background-color: #ADFF00;
+    border-radius: 50%;
 }
 
 .about-section {
     display: flex;
-    align-items: center;
+    padding: 10px 35px;
+    justify-content: space-between;
+    text-align: center;
+    margin-bottom: 12rem;
+    
+    
 }
+.about_area{
+    text-align: left;
+    margin-left: 1rem;
+    
+}
+
 
 .image-container {
     flex: 1;
@@ -142,7 +174,7 @@ header {
 }
 
 .image-container img {
-    max-width: 60%;
+    max-width: 20%;
     border-radius: 50%;
 
 
@@ -163,41 +195,56 @@ header {
     line-height: 1.6;
 }
 
-.skills {
+.services {
+    display: flex;
+    padding: 10px 35px;
+    justify-content: space-between;
     text-align: center;
-    margin-top: 10rem;
-    margin-bottom: 10rem;
+    margin-top: 8rem;
 
 }
 
-.skill-card {
+.service-card {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
 }
 
-.skill {
+.service  {
     width: 200px;
     padding: 20px 25px;
     margin: 20px;
+    margin-bottom: 12rem;
     background-color: #2B2D41;
     border-radius: 10px;
     text-align: left;
 }
 
-.skill i {
+.service  i {
     font-size: 24px;
     margin-bottom: 10px;
 }
 
-.skill h3 {
+.service h3 {
     font-size: 24px;
     margin-bottom: 10px;
 }
 
-.skill p {
+.service  p {
     font-size: 16px;
 }
+
+@media (max-width: 726px) {
+    .skills .selection_icons {
+        margin-top: 8rem;
+        
+    }
+    .skills .skil-card i{
+        gap: 15px;
+    }
+}
+
+
 
 
 .portfolio {
@@ -205,6 +252,7 @@ header {
     padding: 50px 0;
     margin-top: 10rem;
     margin-bottom: 10rem;
+    
 
 }
 
@@ -213,6 +261,22 @@ header {
     margin-bottom: 30px;
 }
 
+.portfolio .tags span{
+   display: block;
+   position: relative;
+    background-color: #ADFF00;
+    color: #212336;
+    padding: 3px 4px;
+    border-radius: 10px;
+    width: 45px;
+    
+}
+.tags{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
 .card {
     display: inline-block;
     width: 300px;
@@ -253,9 +317,96 @@ header {
 }
 
 .card:hover {
+    cursor: pointer;
     transform: scale(1.1);
     transition: .3s ease-in-out;
 }
+
+    
+
+
+
+.skill_cards{
+    margin-top: 1rem;
+   width: 100%;
+   padding: 15px 20px;
+   height: 7rem;
+   background-color: #2B2D41;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   border-radius: 10px;
+   justify-content: center;
+   position: relative;
+   background: linear-gradient(119deg,#23263a,#2b2d41,#d80a0d);
+   background-size: 180% 180%;
+   animation: gradient-animation 24s ease infinite;
+
+
+}
+@keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+
+.skill_cards h6{
+    display: inline;
+    position: relative;
+    top: -8px;
+    right: 1.2rem;
+
+    border-radius: 0px 0px 10px 0px;
+    padding: 10px 15px;
+    width: 100px;
+    text-align: center;
+}
+.skil-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+
+.skil-card i {
+   
+    font-size: 2rem; 
+}
+.skil-card i:hover{
+   transform: scale(1.5);
+   transition: .2s ease-in-out;
+   cursor: pointer;
+   
+}
+.skil-card i:hover::after{
+    content: '';
+    width: 35px;
+    height: 35px;
+    background-color: red;
+    
+    
+ }
+.mocha{ 
+    text-align: center;
+    width: 30px;
+    height: 30px;
+ 
+}
+.mocha:hover{ 
+    transform: scale(1.3);
+    transition: .2s ease-in-out;
+    cursor: pointer;
+
+ 
+}
+
+
+
 
 .portfolio_head {
     text-align: left;
