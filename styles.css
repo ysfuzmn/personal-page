@@ -214,7 +214,6 @@ header {
     width: 200px;
     padding: 20px 25px;
     margin: 20px;
-    margin-bottom: 12rem;
     background-color: #2B2D41;
     border-radius: 10px;
     text-align: left;
@@ -235,13 +234,13 @@ header {
 }
 
 @media (max-width: 726px) {
-    .skills .selection_icons {
-        margin-top: 8rem;
-        
+    .selection_icons {
+        margin-top: 4rem;
     }
     .skills .skil-card i{
         gap: 15px;
     }
+    
 }
 
 
@@ -323,12 +322,14 @@ header {
 }
 
     
-
+.skills{
+    margin-top: 8rem;
+}
 
 
 .skill_cards{
+    margin: 0 auto;
     margin-top: 1rem;
-   width: 100%;
    padding: 15px 20px;
    height: 7rem;
    background-color: #2B2D41;
@@ -368,9 +369,10 @@ header {
 }
 .skil-card {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    gap: 5rem;
+    flex-wrap: wrap;
+    
 }
 
 .skil-card i {
@@ -421,7 +423,7 @@ header {
 }
 
 .contact-form {
-    width: 60%;
+    max-width: 60%;
     height: 400px;
     margin: 0 auto;
     padding: 20px;
